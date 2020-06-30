@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<div class="container center">
+    <br>
+    <div class="row">
+        <% if(stories.length > 0){ %>
+        <% stories.forEach(story => { %>
+        <div class="col s12 m5">
+            <div class="card hoverable">
+                <div class="card-image">
+                    <%- editIcon(story.user, user, story._id) %>
+                </div>
+                <div class="card-content center-align">
+                    <h5><%= story.title %></h5>
+                    <p><%= stripTags(truncate(story.body, 150)) %></p>
+                    <br>
+                    <div class="chip">
+                        <img src="<%=story.user.image%>" alt="">
+                        <a href="/stories/user/<%=story.user._id%>"><%=story.user.displayName%></a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a href="/stories/<%=story._id%>" class="btn grey darken-3">Read More</a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+        <% } else { %>
+        <p>No stories found.</p>
+        <% } %>
+    </div>
+</div>
+
+<%- include('../partials/add_btn') %>
+<%- include('../partials/footer') %>
