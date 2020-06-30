@@ -9,6 +9,9 @@
     },
     "author": "Laksh Jadhwani",
     "license": "ISC",
+    "engines": {
+        "node": "12.16.1"
+    },
     "dependencies": {
         "connect-mongo": "^3.2.0",
         "dotenv": "^8.2.0",

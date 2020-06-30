@@ -102,6 +102,7 @@ app.use('/stories', require('./routes/stories'))
 
 // Initializing static files
 app.use(express.static('public'))
+
 const PORT = process.env.PORT || 3000
 
 // Listening to the port
