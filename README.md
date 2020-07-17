@@ -15,4 +15,4 @@ It is a Web-app where a user can signup or login via Google, he/she can create/e
    * Materialize CSS - Styling
 
 # Web-App Link:
-https://lnkd.in/dRaACAr
+https://gentle-cove-45415.herokuapp.com/
